@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>Secure Message</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+</head> 
+<style type="text/css">
+	html, body{
+		height: 100%;
+	}
+	#x:hover{
+		height: 500px;
+		width: 800px;
+	}
+</style>
+
+<script type="text/javascript">
+	function a()
+	{
+		document.getElementById('e').style.visibility="hidden";
+		document.getElementById('o').style.visibility="visible";
+	}
+	function b()
+	{
+		document.getElementById('e').style.visibility="visible";
+		document.getElementById('o').style.visibility="hidden";
+	}
+</script>
+<body style="background-image: url(https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);background-repeat: no-repeat;background-position: center;background-size: cover;text-align: center;"> 
+	<div class="container" style="padding: 7%;">
+		<a href="/logout" style="color: black;font-size: 25px;margin-left: 100%;"> <span class="glyphicon glyphicon-log-out"></span></a>
+		<h1 style="padding-bottom: 5%;font-weight: bolder;">
+				<span style="color: grey;">Covert</span> Messaging <span class="glyphicon glyphicon-eye-close"></span>
+		</h1>
+		<div class="jumbotron" style="background-color: rgba(0,0,0,0.8);border-radius: 10px;color: white;">
+				<table class="table">
+					<tr>
+						<td>
+							File Save location
+						</td>
+						<td>
+							./outputs
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Encrypted Text<br>
+							(Hover to decrypt)
+						</td>
+						<td onmouseover="a()" onmouseout="b()">
+							<h5 id="e"><%=enc%></h5>
+							<h5 style="visibility: hidden;" id="o">
+								<%=original%>
+							</h5>
+						</td>
+					</tr>
+					<tr>
+						<td>Image transmitted <br> (Hover to zoom)</td>
+						<td>
+							<img src="./output.png" height="100px" width="100px" id="x">
+						</td>
+					</tr>
+				</table> 
+		</div>
+		
+	</div>
+</body> 
+
+</html> 

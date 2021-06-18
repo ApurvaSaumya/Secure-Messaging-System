@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>Secure Message</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+
+
+</head> 
+
+<script type="text/javascript">
+	function a()
+	{
+		var x = $('#f').val().split(".").pop();
+		$('#ft').val(x);
+
+	}
+</script>
+<style type="text/css">
+	html, body{
+		height: 100%;
+	}
+</style>
+<body style="background-image: url(https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);background-repeat: no-repeat;background-position: center;background-size: cover;text-align: center;"> 
+	<div class="container" style="padding: 7%;">
+		<a href="/logout" style="color: black;font-size: 25px;margin-left: 100%;"> <span class="glyphicon glyphicon-log-out"></span></a>
+		<h1 style="padding-bottom: 5%;font-weight: bolder;">
+				<span style="color: grey;">Covert</span> Messaging <span class="glyphicon glyphicon-eye-close"></span>
+		</h1>
+		<div class="jumbotron" style="background-color: rgba(0,0,0,0.8);border-radius: 10px;color: white;">
+			<form action="/stegano" enctype="multipart/form-data" method="POST"> 
+				<table class="table">
+					<tr>
+						<td>
+							Choose Image File
+						</td>
+						<td>
+							<input type="file" name="mypic" style="margin-left: 33%;" id="f" onchange="a()">
+							<input type="text" name="ext" style="visibility: hidden;" id="ft">
+						</td>
+					</tr>
+				</table>
+			<button class="btn btn-lg btn-warning" style="border-radius: 10px;">Analyze</button> 
+	</form> 
+		</div>
+		
+	</div>
+</body> 
+
+</html> 
