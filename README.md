@@ -1,2 +1,8 @@
 # Secure-Messaging-System
-Steganography, Cryptography and Web Developement
+
+Secure messaging is required for the sharing of sensitive information. For example, the transmission of data or messages containing medical information, financial credentials, political opinions, or even armed forces personnel’s messages. These messages and data are considered to be highly confidential and cannot be compromised or unintentionally leaked at any cost, as that would lead to the complete loss of privacy and security. For realizing this, a system is required which is able to conceal the message so that it is imperceptible to any outsiders as well as only comprehensible to the authorized recipients. Thus, imperceptibility and incomprehensibility of the message to any unauthorized outsiders and third-parties needs to be implemented. The objective of this project is to develop such a system which will provide a completely secure messaging service
+
+* Cryptography is applied to the original message, which may be confidential in nature, so as to convert into ciphertext which cannot be comprehended unless it is decrypted. Hence, it is useless to any outsiders as they cannot understand the message. This prevents misuse in case the unauthorized outsider somehow acquires the messages.
+* Steganography is used to make the message imperceptible to the outsiders. Image steganography has been used here. All the encrypted messages are hidden in an ordinary image and image serves as a carrier for the message. There are no significant perceptual changes in the image before and after embedding the message ciphertext onto it, thus ensuring the imperceptibility of the message successfully.
+
+
